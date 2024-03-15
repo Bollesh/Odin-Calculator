@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap');
+*{
+    font-family: Roboto;
+    box-sizing: border-box;
+    font-family: 'Pixelify Sans', sans-serif;
+    user-select: none;
+}
+
+body{
+    background-color: rgb(22,22,22);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+
+.calculatorContainer{
+    position: relative;
+    height: 600px;
+    width: 380px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.calculatorPadding{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    height: 585px;
+    width: 365px;
+    background-color: rgb(59, 59, 59);
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.displayContainer{
+    flex: 1;
+    background-color: white;
+    border-width: 3px 7px 10px;
+    border-style: solid;
+    border-color: #eeeeee #e0e0e0 #c2c2c2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+.display{
+    background-color:rgb(201, 215, 205);
+    height: 88%;
+    width: 96%;
+    border: 4px inset rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.input, .output{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 21px;
+}
+
+.buttons{
+    flex: 3.5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttonContainer{
+    background-color: white;
+    border-width: 3px 7px 10px;
+    border-style: solid;
+    border-color: #eeeeee #e0e0e0 #c2c2c2;
+    border-radius: 5px;
+}
+
+.button{
+    display: flex;
+    align-items:end;
+    justify-content: start;
+    font-size: 24px;
+    padding: 2px;
+    height: 100%;
+    width: 100%;
+}
+
+.equalTo{
+    grid-column: 3/5;
+    grid-row: 5;
+}
+
+.buttonContainer:active{
+    scale: 0.9;
+}
